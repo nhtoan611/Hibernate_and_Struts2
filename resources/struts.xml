@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+   "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+   "http://struts.apache.org/dtds/struts-2.0.dtd">
+   
+   <struts>
+  <constant name="struts.devMode" value="true" />
+
+  <package name="default" namespace="/" extends="struts-default">
+	
+	 <action name="addEmployee"
+	class="action.ManageEmployee" method="addEmployee" >
+       <result name="success">index.jsp</result>
+    </action>
+    
+    <action name="listEmployee"
+	class="action.ManageEmployee" method="listEmployees" >
+       <result name="success">list.jsp</result>
+    </action>
+
+	<action name="deleteEmployee"
+	class="action.ManageEmployee" method="delete" >
+       <result>index.jsp</result>
+    </action>
+    
+	<action name="updateEmployee"
+	class="action.ManageEmployee" method="updateDetails" >
+       <result>update.jsp</result>
+    </action>
+    
+    <action name="update"
+	class="action.ManageEmployee" method="update" >
+       <result name="success">index.jsp</result>
+    </action>
+
+  </package>
+</struts>
